@@ -1,16 +1,9 @@
-x,y = map (int,input().split())
+n , m = map(int,input().split())
 
-x_list , y_list=[] ,[]
+list_a = [list(map(int,input().split())) for _ in range(n)] 
+list_b = [list(map(int,input().split())) for _ in range(n)] 
 
-for i in range(x):
-    a = list(map (int,input().split()))
-    x_list.append(a)
-
-for i in range(x):
-    b = list(map (int,input().split()))
-    y_list.append(b)
-
-for i in range(x):
-    for j in range(y):
-        print(x_list[i][j] + y_list[i][j], end =' ')
+for i in range(n):
+    for j in range(m):
+        print(list_a[i][j] + list_b[i][j], end = " ")
     print()
